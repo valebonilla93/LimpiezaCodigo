@@ -1,13 +1,16 @@
-var boton = document.getElementById("btn");
-var box = document.getElementById("caja");
+const btn = document.getElementById("btn");
+const box = document.getElementById("box");
 
-function CambiarColor() {
-    var letters = "0123456789ABCDEF";
-    var color = "#";
-    for (var i = 0; i < 6; i++) {
+
+// Función que sirve para cambiar el color del rectángulo en pantalla.
+function SwitchColor() {
+    let letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
     }
-    caja.style.backgroundColor = color;
+    box.style.backgroundColor = color;
 }
 
-boton.addEventListener("click", CambiarColor);
+//Controlador de eventos que indica que al hacer click en el botón se ejecutará la función SwitchColor
+btn.addEventListener("click", SwitchColor);
